@@ -45,7 +45,7 @@
                     $birth_date = $data['input']['birth_date'];
                     $join_date = $data['input']['join_date'];                    
                     $agenc_id = $data['input']['agenc_id'];
-                    $status = $data['input']['status'];
+                    $status = $data['input']['status']??false;
                     
                 } else { 
                     if($data['type'] == "edit") {
@@ -62,7 +62,7 @@
                         $birth_date = $data['input'][0]->birth_date;
                         $join_date = $data['input'][0]->join_date;                        
                         $agenc_id = $data['input'][0]->agenc_id;
-                        $status = $data['input'][0]->status;
+                        $status = $data['input'][0]->status??false;
                         $id = $data['input'][0]->id;
                         $photo = $data['input'][0]->photo;
                         if($photo!="" && $photo!=null) {
